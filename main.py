@@ -26,6 +26,7 @@ class MainWindow(QMainWindow):
         self.tableView.setModel(self.model)
         self.tableView.resizeColumnsToContents()
         self.add.clicked.connect(self.add_coffee)
+        self.reload_btnclicked.connect(self.reload)
 
     def reload(self):
         self.model.setQuery(self.request)
