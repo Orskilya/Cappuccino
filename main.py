@@ -1,6 +1,5 @@
 import sys
 import sqlite3
-from PyQt5 import uic
 from PyQt5.QtWidgets import QMainWindow, QApplication, QDialog, QDialogButtonBox, QSpinBox
 from PyQt5.QtSql import QSqlDatabase, QSqlQueryModel
 from UI.addEditCoffeeForm import Ui_Dialog
@@ -42,7 +41,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 class Dialog(QDialog, Ui_Dialog):
     def __init__(self):
-        super(Dialog, self).__init__()
         super().__init__()
         self.setupUi(self)
         self.buttonBox.accepted.connect(self.add)
